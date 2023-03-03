@@ -1,3 +1,11 @@
 name = "nnydtmg-todolist"
 main = "src/index.js"
 compatibility_date = "2023-03-03"
+
+kv_namespaces = [
+  { binding = "TODO_LIST", id = "fd8fa8fcf6ea4bf38bd26cf1b66b222c" }
+]
+
+routes = [
+  {pattern = "todolist.nnydtmg.com", custom_domain = true}
+]
