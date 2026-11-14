@@ -96,9 +96,10 @@ async function getTodos(request) {
   } else {
     data = JSON.parse(cache)
   }
-  const body = html(JSON.stringify(data.todos || []))
+  // </script> 等によるスクリプト脱出を防ぐため < をエスケープしてから埋め込む
+  const body = html(JSON.stringify(data.todos || []).replace(/</g, '\\u003c'))
   return new Response(body, {
-    headers: { 'Content-Type': 'text/html' },
+    headers: { 'Content-Type': 'text/html; charset=UTF-8' },
   })
 }
 
