@@ -2,7 +2,7 @@
   "name": "nnydtmg-todolist",
   "version": "0.0.0",
   "devDependencies": {
-    "wrangler": "^4.0.0"
+    "wrangler": "^4.167.0"
   },
   "private": true,
   "scripts": {
